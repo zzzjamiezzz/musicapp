@@ -1,0 +1,43 @@
+.card {
+    width: 170px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.image-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    margin-left: 6px;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.track-container {
+    gap: 20px;
+    overflow-x: visible;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+}
+
+.artist {
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 4px;
+    font-size: 18px;
+    font-weight: 700;
+}

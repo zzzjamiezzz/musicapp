@@ -8,12 +8,23 @@
     flex-shrink: 0;
 }
 
-
-.card img {
-    border-radius: 4px;
+.image-container {
+    position: relative;
     width: 150px;
     height: 150px;
+    cursor: pointer;
+}
+
+.image-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
     margin-left: 6px;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
 }
 
 .new-release-card-container {
@@ -70,6 +81,7 @@
     text-align: center;
     margin-top: 5px;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .card-slide-artist img {
@@ -77,6 +89,11 @@
     width: 150px;
     height: 150px;
     margin-left: 15px;
+}
+
+.card-slide-artist img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .playlist-swiper {
@@ -167,4 +184,34 @@
 
 .artists-container:hover .prev-button,.artists-container:hover .next-button {
     opacity: 1;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 8px;
+    right: 3px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    opacity: 0;
+}
+
+/* Show play button on hover */
+.image-container:hover .play-button {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.play-btn {
+    background: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
 }
