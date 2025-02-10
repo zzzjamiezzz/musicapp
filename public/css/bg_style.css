@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.background {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+
+.content-container {
+    background-color: #181818;
+    border-radius: 50px 50px 0 0;
+    flex: 1;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+}
+
+.sidebar-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.sidebar-link:hover {
+    color: #3897F0;
+}
+
+.sidebar-link.active {
+    color: #3897F0;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-bottom: 80px;
+}
+
+.elements-container {
+    position: sticky;
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space between search bar and other elements */
+    padding: 10px 20px;
+    background-color: #000000;
+    top: 0;
+    z-index: 10;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-radius: 21px;
+    padding: 5px 10px;
+    width: 400px;
+    margin: 0 auto; /* Center the search bar */
+}
+
+.search-bar-input input {
+    border: none;
+    outline: none;
+    background: none;
+    font-style: italic;
+    width: 130%;
+}
+
+.search-bar-icon {
+    margin-right: 10px;
+    color: #888;
+}
+
+input:focus {
+    font-style: normal;
+    outline: none;
+}
+
+.search-bar-input input::placeholder {
+    color: #888;
+}
+
+.notification, .profile-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Space between notification and profile picture */
+}
+
+.notification-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.notification-btn:hover {
+    color: #3897F0;
+}
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 80%;
+    right: 1%;
+    width: 140px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.dropdown-menu.open-menu {
+    max-height: 400px;
+}
+
+.background-menu {
+    background: #1C1D1E;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 3px;
+}
+
+.background-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #FFFFFF59;
+    margin: 15px 0 10px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #D9D9D9;
+    margin: 12px 0;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.menu-link:hover {
+    transform: translateX(2px);
+    color: #3897F0;
+}
+
+.title {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.song-playback-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 20px;
+    max-width: 250px; /* Limiting the width of song info */
+    overflow: hidden;
+}
+
+.song-info-cover {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.song-info-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vh; /*Width of song details*/
+    overflow: hidden;
+}
+
+.song-title {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.artist-name {
+    font-size: 12px;
+    opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.song-progress-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add spacing between the elements */
+    width: 65%;
+    padding: 0 20px; /* Add padding to the container */
+    margin-bottom: 5px;
+}
+
+.progress-bar-container {
+    flex-grow: 1; /* Let the progress bar take up the remaining space */
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    flex-grow: 1; /* Ensures the progress bar takes up available space */
+    appearance: none;
+    height: 6px;
+    background: linear-gradient(to right, #3897f0 0%, #3897f0 0%, #d9d9d9 0%); /* Blue line */
+    border-radius: 5px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+#progress-container {
+    height: 7px;
+    width: 100%;
+    background-color: rgb(255 255 255 / 33%);
+    margin: 2rem 0 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#progress {
+    background-color: #000;
+    width: 0%;
+    height: inherit;
+    border-radius: inherit;
+    transition: width 100ms ease-in;
+}
+
+#timer-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+}
+
+.playback-controls-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.playback-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.playback-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.playback-controls button:hover {
+    transform: scale(1.2);
+    color: #f0f0f0;
+}
+
+.play-pause-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.play-pause-btn i {
+    position: absolute;
+    font-size: 24px;
+}
+
+#pause-icon {
+    display: none;
+}
+
+.controls-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-right: 80px;
+}
+
+.controls-button button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.controls-button button:hover {
+    transform: scale(1.2);
+    color: #f0f0f0;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume-slider {
+    width: 100px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #D9D9D9;
+    border-radius: 5px;
+    height: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3897F0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    background: #3897F0;
+}
+
+.time-container {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-display {
+    font-size: 12px;
+    color: #ffffff;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.time-remaining {
+    font-size: 12px;
+    color: #ffffff;
+    white-space: nowrap;
+}

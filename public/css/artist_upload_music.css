@@ -1,0 +1,129 @@
+.column {
+    display: flex;
+}
+
+.column1 {
+    width: 500px;
+}
+
+.column2 {
+    width: 500px;
+    margin-left: 30px;
+}
+
+.album-name-input {
+    background: #D9D9D9;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.album-name-input input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+}
+
+.track-upload-container {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.track-upload-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    color: #202020BF;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.track-upload-btn:hover {
+    background-color: #eaeaea;
+}
+
+.track-upload-btn.selected {
+    background-color: transparent;
+    color: #f9f9f9;
+    font-weight: bold;
+    cursor: default;
+}
+
+.file-list {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    max-width: 250px;
+}
+
+.file-item {
+    font-size: 12px;
+    color: #333;
+    padding: 2px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.file-item:last-child {
+    border-bottom: none;
+}
+
+.small-text {
+    margin-top: 5px;
+}
+
+.cover-upload-container {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cover-upload {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-left: 30px;
+}
+
+.cover-upload:hover {
+    background-color: #eaeaea;
+}
+
+.cover-upload-btn {
+    font-size: 14px;
+    color: #666;
+}
+
+.upload-music-btn {
+    bottom: 50px;  /* Adjust the vertical position */
+    left: 30px;    /* Adjust the horizontal position */
+    background-color: #D9D9D9;
+    color: #202020BF;
+    cursor: not-allowed;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.upload-music-btn.active {
+    background-color: #235634;
+    color: #FFFFFF;
+    cursor: pointer;
+}
