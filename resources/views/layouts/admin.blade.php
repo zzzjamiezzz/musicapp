@@ -5,8 +5,8 @@
     <link rel="icon" type="tab-icon" href="pic/music.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Sharing App</title>
-    <link rel="stylesheet" href="css/bg_style.css">
-    <link rel="stylesheet" href="css/admin_main.css">
+    <link rel="stylesheet" href="/css/bg_style.css">
+    <link rel="stylesheet" href="/css/admin_main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

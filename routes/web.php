@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DesignTestController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\DefaultPlaylistController;
 use App\Http\Controllers\UserController; // Import UserController
 
 
@@ -54,3 +55,5 @@ use App\Http\Controllers\UserController; // Import UserController
 Route::get("/design",[DesignTestController::class,'index'])->name('design.index');
 
 Route::get("/",[LandingPageController::class,"index"])->name("ladings.index");
+
+Route::get("/playlist",[DefaultPlaylistController::class,'index'])->name("playlist.index");
