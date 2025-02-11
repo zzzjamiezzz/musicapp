@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('styles')
-<link rel="stylesheet" href="css/user_saved_playlist.css">
+<link rel="stylesheet" href="css/user_follow_artist.css">
 @endsection
 @section('content')
    <!-- Main Content -->

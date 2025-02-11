@@ -1,6 +1,6 @@
 @extends('layouts.artist')
 @section('styles')
-<link rel="stylesheet" href="css/artist_album.css">
+<link rel="stylesheet" href="css/artist_main.css">
 @endsection
 @section('content')
  <!-- Main Content -->
