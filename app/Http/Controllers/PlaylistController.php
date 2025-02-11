@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DesignTestController extends Controller
+class PlaylistController extends Controller
 {
     public function index(){
-        return view("artist_main");
+        return view("default_saved_playlist");
     }
 }
