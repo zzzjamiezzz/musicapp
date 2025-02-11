@@ -1,4 +1,53 @@
-<!-- Song Playback Bar Container -->
+@extends('layouts.default')
+@section('styles')
+<link rel="stylesheet" href="/css/default_liked_songs.css">
+@endsection
+@section('content')
+   <!-- Main Content -->
+   <div class="main">
+    <!-- Top Section -->
+    <div class="elements-container">
+        <div class="search-bar">
+            <div class="search-bar-icon"><i class="fa fa-search"></i></div>
+            <div class="search-bar-input"><input type="text" placeholder="Search for songs, artists..."></div>
+        </div>
+        <!-- Notification Section -->
+        <div class="notification">
+            <button class="notification-btn"><i class="bi bi-bell"></i></button>
+        </div>
+        <!-- Profile Pic Section -->
+        <div class="profile-picture">
+            <img src="pic/grey.png" alt="Profile Image" class="profile" onclick="toggleMenu()">
+        </div>
+        <!-- Dropdown Profile List -->
+        <div class="dropdown-menu" id="dropdown-menu">
+            <div class="background-menu">
+                <a href="#" class="menu-link">Sign In/Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="content-container">
+        <div class="playlist-header">
+            <div class="title">Liked Songs</div>
+        </div>
+
+        <div class="track-container">
+            <div class="card">
+                <div class="image-container">
+                    <img src="pic/grey.png" alt="No Liked Song">
+                    <div class="play-button">
+                        <button class="play-btn">
+                            <i class="fa fa-play" id="track-play-icon"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="music-title">0 Song</div>
+            </div>
+        </div>
+
+        <!-- Song Playback Bar Container -->
 <div class="song-playback-bar music-container" id="music-box">
     <div class="song-info" id="music-info">
         <audio id="disc"></audio>
